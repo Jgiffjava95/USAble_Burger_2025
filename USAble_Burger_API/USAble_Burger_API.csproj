@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="DatabaseConnection\NewFolder1\**" />
+    <Compile Remove="DatabaseConnection\NewFolder\**" />
+    <Content Remove="DatabaseConnection\NewFolder1\**" />
+    <Content Remove="DatabaseConnection\NewFolder\**" />
+    <EmbeddedResource Remove="DatabaseConnection\NewFolder1\**" />
+    <EmbeddedResource Remove="DatabaseConnection\NewFolder\**" />
+    <None Remove="DatabaseConnection\NewFolder1\**" />
+    <None Remove="DatabaseConnection\NewFolder\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+</Project>

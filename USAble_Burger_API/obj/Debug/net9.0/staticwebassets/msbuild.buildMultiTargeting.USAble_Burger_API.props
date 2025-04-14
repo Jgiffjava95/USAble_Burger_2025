@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\USAble_Burger_API.props" />
+</Project>

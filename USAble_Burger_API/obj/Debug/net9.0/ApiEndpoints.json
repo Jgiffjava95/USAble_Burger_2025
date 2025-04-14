@@ -1,0 +1,120 @@
+[
+  {
+    "ContainingType": "USAble_Burger_API.Controllers.USAbleBurgerApi",
+    "Method": "NewOrder",
+    "RelativePath": "api/create_order",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "body",
+        "Type": "USAble_Burger_API.Models.DTO.OrderDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "NewOrder"
+  },
+  {
+    "ContainingType": "USAble_Burger_API.Controllers.USAbleBurgerApi",
+    "Method": "GetDiscountCollection",
+    "RelativePath": "api/discounts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[USAble_Burger_API.Models.Discount, USAble_Burger_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetDiscountCollection"
+  },
+  {
+    "ContainingType": "USAble_Burger_API.Controllers.USAbleBurgerApi",
+    "Method": "GetItemCollection",
+    "RelativePath": "api/items",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[USAble_Burger_API.Models.Item, USAble_Burger_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetItemCollection"
+  },
+  {
+    "ContainingType": "USAble_Burger_API.Controllers.USAbleBurgerApi",
+    "Method": "GetUserByUserName",
+    "RelativePath": "api/login",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "password",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "USAble_Burger_API.Models.UserDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetUserByUsername"
+  },
+  {
+    "ContainingType": "USAble_Burger_API.Controllers.USAbleBurgerApi",
+    "Method": "GetOrdersByUserId",
+    "RelativePath": "api/orders",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[USAble_Burger_API.Order, USAble_Burger_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetOrdersByUserId"
+  }
+]
