@@ -10,4 +10,6 @@ public partial class Item
     public string ItemName { get; set; } = null!;
 
     public double ItemPrice { get; set; }
+
+    public int ItemType { get; set; }
 }

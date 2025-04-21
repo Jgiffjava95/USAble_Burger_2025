@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using USAble_Burger_API.Models;
 
-namespace USAble_Burger_API;
+namespace USAble_Burger_API.Models;
 
 public partial class Order
 {

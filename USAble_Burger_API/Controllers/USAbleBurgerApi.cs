@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using USAble_Burger_API.DatabaseConnection;
 using USAble_Burger_API.Models;
 using USAble_Burger_API.Models.DTO;
 
@@ -18,6 +19,17 @@ namespace USAble_Burger_API.Controllers
                 return NotFound();
             }
             return foundItems;
+        }
+
+        [HttpGet("/api/itemTypes", Name = "GetItemTypeCollection")]
+        public async Task<ActionResult<List<ItemType>>> GetItemTypeCollection()
+        {
+            var foundItemTypes = await context.ItemTypes.ToListAsync();
+            if (foundItemTypes == null)
+            {
+                return NotFound();
+            }
+            return foundItemTypes;
         }
 
         [HttpGet("/api/login", Name = "GetUserByUsername")]

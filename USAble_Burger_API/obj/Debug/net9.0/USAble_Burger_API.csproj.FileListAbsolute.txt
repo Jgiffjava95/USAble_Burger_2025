@@ -5,7 +5,6 @@ C:\Users\toyma\source\repos\USAble_Burger_API\USAble_Burger_API\obj\Debug\net9.0
 C:\Users\toyma\source\repos\USAble_Burger_API\USAble_Burger_API\obj\Debug\net9.0\USAble_Burger_API.csproj.CoreCompileInputs.cache
 C:\Users\toyma\source\repos\USAble_Burger_API\USAble_Burger_API\obj\Debug\net9.0\USAble_Burger_API.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\toyma\source\repos\USAble_Burger_API\USAble_Burger_API\obj\Debug\net9.0\USAble_Burger_API.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\toyma\source\repos\USAble_Burger_API\USAble_Burger_API\bin\Debug\net9.0\appsettings.Development.json
 C:\Users\toyma\source\repos\USAble_Burger_API\USAble_Burger_API\bin\Debug\net9.0\appsettings.json
 C:\Users\toyma\source\repos\USAble_Burger_API\USAble_Burger_API\bin\Debug\net9.0\USAble_Burger_API.staticwebassets.endpoints.json
 C:\Users\toyma\source\repos\USAble_Burger_API\USAble_Burger_API\bin\Debug\net9.0\USAble_Burger_API.exe
@@ -165,3 +164,4 @@ C:\Users\toyma\source\repos\USAble_Burger_API\USAble_Burger_API\obj\Debug\net9.0
 C:\Users\toyma\source\repos\USAble_Burger_API\USAble_Burger_API\obj\Debug\net9.0\USAble_Burger_API.pdb
 C:\Users\toyma\source\repos\USAble_Burger_API\USAble_Burger_API\obj\Debug\net9.0\USAble_Burger_API.genruntimeconfig.cache
 C:\Users\toyma\source\repos\USAble_Burger_API\USAble_Burger_API\obj\Debug\net9.0\ref\USAble_Burger_API.dll
+C:\Users\toyma\source\repos\USAble_Burger_API\USAble_Burger_API\obj\Debug\net9.0\USAble_Burger_API.sourcelink.json

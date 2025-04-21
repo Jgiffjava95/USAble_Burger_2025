@@ -60,6 +60,27 @@
   },
   {
     "ContainingType": "USAble_Burger_API.Controllers.USAbleBurgerApi",
+    "Method": "GetItemTypeCollection",
+    "RelativePath": "api/itemTypes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[USAble_Burger_API.Models.ItemType, USAble_Burger_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetItemTypeCollection"
+  },
+  {
+    "ContainingType": "USAble_Burger_API.Controllers.USAbleBurgerApi",
     "Method": "GetUserByUserName",
     "RelativePath": "api/login",
     "HttpMethod": "GET",
@@ -106,7 +127,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[USAble_Burger_API.Order, USAble_Burger_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[USAble_Burger_API.Models.Order, USAble_Burger_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",

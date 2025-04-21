@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("USAble_Burger_API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2334984c0294411242172e0da3bffc621242a781")]
 [assembly: System.Reflection.AssemblyProductAttribute("USAble_Burger_API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("USAble_Burger_API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

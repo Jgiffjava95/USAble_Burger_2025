@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using USAble_Burger_API.Models;
 
-namespace USAble_Burger_API;
+namespace USAble_Burger_API.DatabaseConnection;
 
 public partial class UsableBurgerContext : DbContext
 {
@@ -20,12 +20,14 @@ public partial class UsableBurgerContext : DbContext
 
     public virtual DbSet<Item> Items { get; set; }
 
+    public virtual DbSet<ItemType> ItemTypes { get; set; }
+
     public virtual DbSet<Order> Orders { get; set; }
 
     public virtual DbSet<User> Users { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlServer("Name=ConnectionStrings:DefaultConnection");
+        => optionsBuilder.UseSqlServer("Server=DESKTOP-RI52K2C;Database=USAble_Burger;Trusted_Connection=True;TrustServerCertificate=true"); //WTF
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -40,9 +42,18 @@ public partial class UsableBurgerContext : DbContext
 
         modelBuilder.Entity<Item>(entity =>
         {
-            entity.HasKey(e => e.ItemId).HasName("PK__Items__727E838B4D9D1642");
+            entity.HasKey(e => e.ItemId).HasName("PK__Items__727E838BD79135C0");
 
             entity.Property(e => e.ItemName)
+                .HasMaxLength(20)
+                .IsUnicode(false);
+        });
+
+        modelBuilder.Entity<ItemType>(entity =>
+        {
+            entity.HasKey(e => e.TypeId).HasName("PK__ItemType__516F03B5D623A109");
+
+            entity.Property(e => e.TypeName)
                 .HasMaxLength(20)
                 .IsUnicode(false);
         });
