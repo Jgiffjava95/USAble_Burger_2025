@@ -6,9 +6,15 @@ public class UserDTO
 
     public string UserName { get; set; } = null!;
 
-    public UserDTO(int UserId, string UserName) {
-        this.UserId = UserId;
-        this.UserName = UserName;
+    public string FirstName { get; set; } = null!;
+
+    public string LastName { get; set; } = null!;
+
+    public UserDTO(int userId, string userName, string firstName, string lastName) {
+        this.UserId = userId;
+        this.UserName = userName;
+        this.FirstName = firstName;
+        this.LastName = lastName;
     }
 
 }

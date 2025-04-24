@@ -8,12 +8,22 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "body",
+        "Name": "order",
         "Type": "USAble_Burger_API.Models.DTO.OrderDTO",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [],
+    "ReturnTypes": [
+      {
+        "Type": "USAble_Burger_API.Models.DTO.BurgerResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
     "EndpointName": "NewOrder"
   },
   {
@@ -26,7 +36,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[USAble_Burger_API.Models.Discount, USAble_Burger_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "USAble_Burger_API.Models.DTO.BurgerResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -47,7 +57,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[USAble_Burger_API.Models.Item, USAble_Burger_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "USAble_Burger_API.Models.DTO.BurgerResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -60,6 +70,33 @@
   },
   {
     "ContainingType": "USAble_Burger_API.Controllers.USAbleBurgerApi",
+    "Method": "GetItemsByOrder",
+    "RelativePath": "api/items_by_order",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "orderId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "USAble_Burger_API.Models.DTO.BurgerResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetItemsByOrder"
+  },
+  {
+    "ContainingType": "USAble_Burger_API.Controllers.USAbleBurgerApi",
     "Method": "GetItemTypeCollection",
     "RelativePath": "api/itemTypes",
     "HttpMethod": "GET",
@@ -68,7 +105,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[USAble_Burger_API.Models.ItemType, USAble_Burger_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "USAble_Burger_API.Models.DTO.BurgerResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -93,14 +130,14 @@
         "IsRequired": false
       },
       {
-        "Name": "password",
+        "Name": "userPassword",
         "Type": "System.String",
         "IsRequired": false
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "USAble_Burger_API.Models.UserDTO",
+        "Type": "USAble_Burger_API.Models.DTO.BurgerResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -127,7 +164,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[USAble_Burger_API.Models.Order, USAble_Burger_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "USAble_Burger_API.Models.DTO.BurgerResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -137,5 +174,26 @@
       }
     ],
     "EndpointName": "GetOrdersByUserId"
+  },
+  {
+    "ContainingType": "USAble_Burger_API.Controllers.USAbleBurgerApi",
+    "Method": "GetTaxTypesCollection",
+    "RelativePath": "api/tax_types",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "USAble_Burger_API.Models.DTO.BurgerResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetTaxTypesCollection"
   }
 ]

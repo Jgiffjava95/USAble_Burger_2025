@@ -17,26 +17,58 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Item"
-                  }
+                  "$ref": "#/components/schemas/BurgerResponse"
                 }
               },
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Item"
-                  }
+                  "$ref": "#/components/schemas/BurgerResponse"
                 }
               },
               "text/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Item"
-                  }
+                  "$ref": "#/components/schemas/BurgerResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/items_by_order": {
+      "get": {
+        "tags": [
+          "USAbleBurgerApi"
+        ],
+        "operationId": "GetItemsByOrder",
+        "parameters": [
+          {
+            "name": "orderId",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BurgerResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BurgerResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BurgerResponse"
                 }
               }
             }
@@ -56,26 +88,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/ItemType"
-                  }
+                  "$ref": "#/components/schemas/BurgerResponse"
                 }
               },
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/ItemType"
-                  }
+                  "$ref": "#/components/schemas/BurgerResponse"
                 }
               },
               "text/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/ItemType"
-                  }
+                  "$ref": "#/components/schemas/BurgerResponse"
                 }
               }
             }
@@ -99,7 +122,7 @@
             }
           },
           {
-            "name": "password",
+            "name": "userPassword",
             "in": "query",
             "style": "form",
             "schema": {
@@ -113,17 +136,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/UserDTO"
+                  "$ref": "#/components/schemas/BurgerResponse"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UserDTO"
+                  "$ref": "#/components/schemas/BurgerResponse"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UserDTO"
+                  "$ref": "#/components/schemas/BurgerResponse"
                 }
               }
             }
@@ -154,26 +177,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Order"
-                  }
+                  "$ref": "#/components/schemas/BurgerResponse"
                 }
               },
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Order"
-                  }
+                  "$ref": "#/components/schemas/BurgerResponse"
                 }
               },
               "text/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Order"
-                  }
+                  "$ref": "#/components/schemas/BurgerResponse"
                 }
               }
             }
@@ -193,26 +207,47 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Discount"
-                  }
+                  "$ref": "#/components/schemas/BurgerResponse"
                 }
               },
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Discount"
-                  }
+                  "$ref": "#/components/schemas/BurgerResponse"
                 }
               },
               "text/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Discount"
-                  }
+                  "$ref": "#/components/schemas/BurgerResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/tax_types": {
+      "get": {
+        "tags": [
+          "USAbleBurgerApi"
+        ],
+        "operationId": "GetTaxTypesCollection",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BurgerResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BurgerResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BurgerResponse"
                 }
               }
             }
@@ -247,7 +282,24 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BurgerResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BurgerResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BurgerResponse"
+                }
+              }
+            }
           }
         }
       }
@@ -255,20 +307,18 @@
   },
   "components": {
     "schemas": {
-      "Discount": {
+      "BurgerResponse": {
         "type": "object",
         "properties": {
-          "discountId": {
-            "type": "integer",
-            "format": "int32"
+          "data": {
+            "nullable": true
           },
-          "discountName": {
+          "message": {
             "type": "string",
             "nullable": true
           },
-          "discountPercentage": {
-            "type": "number",
-            "format": "double"
+          "success": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -295,42 +345,6 @@
         },
         "additionalProperties": false
       },
-      "ItemType": {
-        "type": "object",
-        "properties": {
-          "typeId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "typeName": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "Order": {
-        "type": "object",
-        "properties": {
-          "orderId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "orderTotal": {
-            "type": "number",
-            "format": "double"
-          },
-          "orderTaker": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "orderItems": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
       "OrderDTO": {
         "type": "object",
         "properties": {
@@ -338,27 +352,36 @@
             "type": "number",
             "format": "double"
           },
+          "orderSubTotal": {
+            "type": "number",
+            "format": "double"
+          },
+          "orderDiscountAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "orderPreTaxTotal": {
+            "type": "number",
+            "format": "double"
+          },
+          "orderTaxAmount": {
+            "type": "number",
+            "format": "double"
+          },
           "orderTaker": {
             "type": "integer",
             "format": "int32"
           },
           "orderItems": {
-            "type": "string",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Item"
+            },
             "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "UserDTO": {
-        "type": "object",
-        "properties": {
-          "userId": {
-            "type": "integer",
-            "format": "int32"
           },
-          "userName": {
-            "type": "string",
-            "nullable": true
+          "orderDate": {
+            "type": "integer",
+            "format": "int64"
           }
         },
         "additionalProperties": false
